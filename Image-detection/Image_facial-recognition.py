@@ -1,8 +1,8 @@
 import cv2
 
-image = cv2.imread('Image-detection/source/gossip-girl.webp')
+# image = cv2.imread('Image-detection/source/gossip-girl.webp')
 # image = cv2.imread('Image-detection/source/ff.webp')
-# image = cv2.imread('Image-detection/source/wwe.jpeg')
+image = cv2.imread('Image-detection/source/wwe.jpeg')
 
 # Convert to grayscale
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
