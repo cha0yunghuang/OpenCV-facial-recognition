@@ -1,8 +1,8 @@
 import cv2
 
-# image = cv2.imread('Image-detection/source/gossip-girl.webp')
+image = cv2.imread('Image-detection/source/gossip-girl.webp')
 # image = cv2.imread('Image-detection/source/ff.webp')
-image = cv2.imread('Image-detection/source/wwe.jpeg')
+# image = cv2.imread('Image-detection/source/wwe.jpeg')
 
 # Convert to grayscale
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
@@ -10,10 +10,10 @@ gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 face_Cascade = cv2.CascadeClassifier('Image-detection/opencv/haarcascade_frontalface_default.xml')
 
 # Detection
-faceRec = face_Cascade.detectMultiScale(gray, 1.1, 10)
+faceRec = face_Cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=10)
 print(len(faceRec))
 
-# Create and locate rectangles on the face
+# Draw rectangles on the face
 for (x, y, w, h) in faceRec:
     cv2.rectangle(image, (x,y), (x+w, y+h), (0,255,0), 2)
 
