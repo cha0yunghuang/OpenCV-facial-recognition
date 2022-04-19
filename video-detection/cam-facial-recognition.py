@@ -1,13 +1,14 @@
 import cv2
 
-cap = cv2.VideoCapture(0)
+# using webcam
+video = cv2.VideoCapture(0)
 
 # OpenCV haarcascade_frontalface model
-face_Cascade = cv2.CascadeClassifier('Cam-detection/opencv/haarcascade_frontalface_alt2.xml')
+face_Cascade = cv2.CascadeClassifier('video-detection/opencv/haarcascade_frontalface_alt2.xml')
 
 
 while(True):
-    ret, frame = cap.read()
+    ret, frame = video.read()
     # Convert to grayscale
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     # Detection
@@ -18,6 +19,9 @@ while(True):
         cv2.rectangle(frame, (x,y), (x+w, y+h), (0, 255, 0), 2)
 
     # Display
-    cv2.imshow('frame', frame)
-    if cv2.waitKey(20) & 0xFF == ord('q'):
+    cv2.imshow('Capture', frame)
+    if cv2.waitKey(20) == ord('q'):
         break
+
+video.released()
+cv2.destroyAllWindows()
