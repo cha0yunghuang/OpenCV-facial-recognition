@@ -19,7 +19,7 @@
 
 3. Run the script
 
-### Facial Recognition by Live Video
+### Facial Recognition by Live Stream
 
 1. Make sure the camera device is connected to your computer
 
