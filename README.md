@@ -19,6 +19,10 @@
 
 3. Run the script
 
+#### Result
+
+<img width="1456" alt="ff_screenshot" src="https://user-images.githubusercontent.com/46222458/164132975-68532b7a-c7ec-4dcb-a002-4a7bb6d762be.png">
+
 ### Facial Recognition by Live Stream
 
 1. Make sure the camera device is connected to your computer
